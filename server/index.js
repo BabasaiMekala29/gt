@@ -20,7 +20,7 @@ const app = express();
 //   next();
 // });
 app.use(cors({
-  origin: 'https://glidethrough-frontend.vercel.app',
+  origin: 'https://gt-frontend-fawn.vercel.app',
   methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'PATCH', 'DELETE'],
   allowedHeaders: ['X-CSRF-Token', 'X-Requested-With', 'Accept', 'Accept-Version', 'Content-Length', 'Content-MD5', 'Content-Type', 'Date', 'X-Api-Version'],
   credentials: true
