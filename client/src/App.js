@@ -76,7 +76,7 @@ function PostisAvailable({ a, b }) {
   useEffect(() => {
       const fetchPostStatus = async () => {
           try {
-              const response = await fetch(`http://127.0.0.1:5000/checkpost/${id}/`);
+              const response = await fetch(`https://gt-api-wine.vercel.app/checkpost/${id}/`);
               const data = await response.json();
               console.log(data);
               setPostStatus(data.message === "Post found");
