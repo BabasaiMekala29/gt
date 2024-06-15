@@ -72,7 +72,7 @@ export default function InterestsPage() {
     const username = userInfo?.username;
     // Handle the submission logic here
     try {
-        const response = await fetch('http://127.0.0.1:5000/interests', {
+        const response = await fetch('https://gt-api-wine.vercel.app/interests', {
           method: 'POST',
           body: JSON.stringify({ username, selectedInterests }),
           headers: { 'Content-Type': 'application/json' },
@@ -81,7 +81,7 @@ export default function InterestsPage() {
         const data = await response.json();
         if(response.ok){
             try {
-                const response = await fetch(`http://127.0.0.1:5000/user/${userid}/tipNotification`);
+                const response = await fetch(`https://gt-api-wine.vercel.app/user/${userid}/tipNotification`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch post notifications');
                 }
