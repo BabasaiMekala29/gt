@@ -55,7 +55,7 @@ export default function InterestsPage() {
     
     const fetchInterests = async () => {
         try {
-            const response = await fetch(`http://127.0.0.1:5000/interests/${userInfo?.username}`, {
+            const response = await fetch(`https://gt-api-wine.vercel.app/interests/${userInfo?.username}`, {
                 method: 'GET',
                 credentials: 'include'
             });
@@ -93,7 +93,7 @@ export default function InterestsPage() {
     const username = userInfo.username;
     // Handle the submission logic here
     try {
-        const response = await fetch('http://127.0.0.1:5000/edit-interests', {
+        const response = await fetch('https://gt-api-wine.vercel.app/edit-interests', {
           method: 'PUT',
           body: JSON.stringify({ username, selectedInterests }),
           headers: { 'Content-Type': 'application/json' },
