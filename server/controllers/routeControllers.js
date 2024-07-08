@@ -917,9 +917,10 @@ module.exports.put_notification = async (req, res) => {
                     userinfo: user,
                     notifs: [{ commentText: comment, postDetails: id, by, category, subcategory, section }],
                 })
+                res.json(newDoc);
             }
 
-            res.json(newDoc);
+            
         }
 
         else {
